@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibilidad de Horóscopos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="chinese-horoscope.html">Horóscopo Chino</a></li>
+                <li><a href="western-horoscope.html">Horóscopo Occidental</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Simulador de Compatibilidad</h1>
+        <form id="horoscopeForm">
+            <div>
+                <label for="dob1">Fecha de Nacimiento Persona 1:</label>
+                <input type="date" id="dob1" required>
+            </div>
+            <div>
+                <label for="dob2">Fecha de Nacimiento Persona 2:</label>
+                <input type="date" id="dob2" required>
+            </div>
+            <button type="button" onclick="calculateCompatibility()">Calcular Compatibilidad</button>
+            <button onclick="clearFields()">Nueva consulta</button>
+        </form>
+        
+
+        <div id="result">
+            <!-- Aquí se mostrarán los resultados -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

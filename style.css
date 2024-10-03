@@ -1,0 +1,239 @@
+/* Fuente de Google Fonts para el estilo moderno */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiado a min-height para permitir desplazamiento */
+    background: linear-gradient(135deg, #6a0dad, #8ec5fc);
+    margin: 0;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    flex-direction: column;
+}
+.header {
+    
+    background-color: #6a0dad;
+    padding: 1% 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2%;
+    border-radius: 18px;
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px; /* Ancho máximo para mantener el diseño en pantallas grandes */
+    padding: 4%;
+    margin: 2% auto; /* Margen para centrar y permitir espacio vertical */
+    border: 1px solid #ddd;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em; /* Ajustado para mejor visualización */
+    margin-bottom: 3%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, #6a0dad, #8ec5fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5%; /* Ajustado para mejor espaciado */
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 1%;
+    color: #555;
+}
+
+input[type="date"] {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    width: 100%;
+    padding: 1.5%;
+    font-size: 1em;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+input[type="date"]:focus {
+    border-color: #6a0dad;
+    background: #fff;
+    outline: none;
+    animation: pulse 0.5s ease-out;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background-color: #6a0dad;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 2%;
+    width: 100%;
+    padding: 1.5%;
+    font-size: 1.2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+button:hover {
+    background-color: #4a0b7b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+/* Aseguramos que ambos botones tengan un margen entre sí */
+button + button {
+    margin-top: 1%;
+}
+
+#result-container {
+    margin-top: 2%;
+}
+
+#result {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+    color: #333;
+    padding: 2%;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+#result:hover {
+    background-color: #eaeaea;
+}
+
+h3, h4 {
+    color: #6a0dad;
+    margin-top: 2%;
+}
+
+h4 {
+    font-size: 1.3em;
+    margin-bottom: 1%;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        border-color: #6a0dad;
+    }
+    50% {
+        border-color: #8ec5fc;
+    }
+    100% {
+        border-color: #6a0dad;
+    }
+}
+.horoscope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2%;
+    margin-top: 4%;
+}
+
+.horoscope-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.horoscope-card i {
+    font-size: 2.5em;
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.horoscope-card h3 {
+    color: #6a0dad;
+    margin-top: 1.5%;
+}
+
+.horoscope-card p {
+    color: #333;
+    font-size: 1em;
+    margin-top: 1%;
+}
+
+.horoscope-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 5%;
+    }
+
+    button {
+        padding: 1.5%;
+        font-size: 1em;
+    }
+}
